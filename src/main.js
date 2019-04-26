@@ -2,7 +2,9 @@ import './styles.css';
 import $ from 'jquery';
 
 $(document).ready(function(){
-  $('#furniture').click(function(){
+    $("#showByTypeId").click(function(){
+    let selectedOption = $("#selectType").val();
+    // console.log(selectedOption);
 
     let promise = new Promise(function(resolve, reject) {
       let request = new XMLHttpRequest();
@@ -21,14 +23,53 @@ $(document).ready(function(){
     promise.then(function(response){
       let body = JSON.parse(response);
       let bodyData = body.body.data;
-      console.log(body.body);
+      console.log("" + bodyData[5].type);
       if (bodyData.length === 0) {
         $('#showFurniture').text('No furniture')
       } else {
         for (let i = 0; i < bodyData.length; i++) {
-          $('#showFurniture').append(`<li>${bodyData[i].name}</li>`);
+          if (("" + bodyData[i].type) === selectedOption) {
+            $('#showFurniture').append(`<li>${bodyData[i].name}</li>`);
+            $('#showFurniture').append(`<li><img src="${bodyData[i].imageUrl}"></img></li>`);
+          } 
         }
       }
     })
   })
 })
+
+
+  // $('#showByType').submit(function(){
+  //   // event.preventDefault();
+  //   let selectedOption = $("#selectType").val();
+  //   console.log()
+  //   let promise = new Promise(function(resolve, reject) {
+  //     let request = new XMLHttpRequest();
+  //     let url = `https://it771mq5n2.execute-api.us-west-2.amazonaws.com/production/furniture`;
+  //     request.onload = function() {
+  //       if (this.status === 200) {
+  //         resolve(request.response);
+  //       } else {
+  //         reject(Error(request.statusText));
+  //       }
+  //     }
+  //     request.open("GET", url, true);
+  //     request.send();
+  //   })
+
+  //   promise.then(function(response){
+  //     let body = JSON.parse(response);
+  //     let bodyData = body.body.data;
+  //     console.log(bodyData);
+  //     if (bodyData.length === 0) {
+  //       $('#showFurniture').text('No furniture')
+  //     } else {
+  //       for (let i = 0; i < bodyData.length; i++) {
+  //         if (bodyData[i].type === selectedOption) {
+  //           $('#showFurniture').append(`<li>${bodyData[i].name}</li>`);
+  //           $('#showFurniture').append(`<li>${bodyData[i].type}</li>`);
+  //         }
+  //       }
+  //     }
+  //   })
+  // })

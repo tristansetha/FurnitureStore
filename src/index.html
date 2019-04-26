@@ -1,10 +1,31 @@
 <html>
   <head>
     <script src="jquery-3.3.1.js"></script>
-    <script type="text/javascript" src="Furniture.js"></script>
+    <script type="text/javascript" src="search.js"></script>
   </head>
   <body>
-    <button id="furniture" type="submit">Furniture</button>
-    <ul id="showFurniture"></ul>
+  </form id="showByType">
+    <select id="selectType">
+      <option value="sofa">sofa</option>
+      <option value="rug">rug</option>
+      <option value="table">table</option>
+      <option value="chair">chair</option>
+    </select>
+    <button id="showByTypeId" type="submit">show by type</button>
+  </form>
+  <ul id="showFurniture"></ul>
   </body>
 </html>
+
+<!-- <html>
+  <head>
+    <script src="jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+  </head>
+  <body>
+    <form id="showAll">
+      <button id="furniture" type="submit">show all</button>
+
+    <ul id="showFurniture"></ul>
+  </body>
+</html> -->

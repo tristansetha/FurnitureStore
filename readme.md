@@ -1,3 +1,18 @@
+# Furniture store
+
+By Tristan Setha 04/26/19
+
+## Description
+ retrieving data from a furniture store's existing API
+ 
+## Run
+```
+npm i
+```
+```
+npm run start
+```
+
 ## Instructions for Code Challenge
 
 User Story:

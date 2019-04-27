@@ -30,8 +30,8 @@ $(document).ready(function(){
       } else {
         for (let i = 0; i < bodyData.length; i++) {
           if (("" + bodyData[i].type) === selectedOption) {
-            $('#showFurniture').append(`<li>${bodyData[i].name}</li>`);
-            $('#showFurniture').append(`<li><img src="${bodyData[i].imageUrl}"></img></li>`);
+            $('#showFurniture').prepend(`<br><li><img src="${bodyData[i].imageUrl}"></img></li>`);
+            $('#showFurniture').prepend(`<br><li>${bodyData[i].name}</li>`);
           } 
         }
       }

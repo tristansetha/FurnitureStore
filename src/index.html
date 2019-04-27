@@ -5,17 +5,23 @@
     <link href="styles.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-  </form id="showByType">
-    <select id="selectType">
-      <option value="sofa">sofa</option>
-      <option value="rug">rug</option>
-      <option value="table">table</option>
-      <option value="chair">chair</option>
-    </select>
-    <button id="showByTypeId" type="submit">show by type</button>
-    <button id="reset" type="reset">[Reset]</button>
-  </form>
-  <ul id="showFurniture"></ul>
+    <form id="showByType">
+        <h1>Furniture</h1>
+      <div class="wrapper">
+          <div class="nested">
+              <select id="selectType">
+                <option value="sofa">sofa</option>
+                <option value="rug">rug</option>
+                <option value="table">table</option>
+                <option value="chair">chair</option>
+              </select>
+            <br><button class="btn" id="showByTypeId" type="submit">submit</button>
+            <button class="btn2" id="reset" type="reset">reset</button>
+          </div>
+          <div><ul id="showFurniture"></ul></div>
+      </div>
+
+    </form>
   </body>
 </html>
 

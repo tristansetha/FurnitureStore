@@ -6,6 +6,7 @@ By Tristan Setha 04/26/19
  retrieving data from a furniture store's existing API
  
 ## Run
+<br>Make sure you have [Node.js](https://nodejs.org/en/) installed. Run the following commands in the project root directory:
 ```
 npm i
 ```

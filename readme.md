@@ -51,3 +51,7 @@ Development requirements:
 API:
 
 https://it771mq5n2.execute-api.us-west-2.amazonaws.com/production/furniture
+
+## Technologies Used
+
+Javascript, Webpack, Node.js, html, css
